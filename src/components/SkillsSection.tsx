@@ -1,0 +1,108 @@
+import { Code, Database, Server, Wrench, Palette, Users } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+
+const SkillsSection = () => {
+  const skillCategories = [
+    {
+      icon: Code,
+      title: 'Programming Languages',
+      skills: ['Java', 'JavaScript', 'TypeScript', 'Python', 'C++', 'C'],
+      color: 'bg-primary/10 text-primary'
+    },
+    {
+      icon: Server,
+      title: 'Frameworks & Libraries',
+      skills: ['Spring Boot', 'Angular', 'Hibernate', 'Tailwind CSS', 'JEE'],
+      color: 'bg-accent/10 text-accent'
+    },
+    {
+      icon: Database,
+      title: 'Databases',
+      skills: ['MySQL', 'Oracle', 'SQL', 'PL/SQL'],
+      color: 'bg-green-500/10 text-green-600'
+    },
+    {
+      icon: Wrench,
+      title: 'Tools & Technologies',
+      skills: ['Git', 'GitHub', 'GitLab', 'Docker', 'Postman', 'PgAdmin'],
+      color: 'bg-orange-500/10 text-orange-600'
+    },
+    {
+      icon: Palette,
+      title: 'Design & Planning',
+      skills: ['Figma', 'UML', 'Trello', 'Jira', 'Open Project'],
+      color: 'bg-purple-500/10 text-purple-600'
+    },
+    {
+      icon: Users,
+      title: 'Methodologies',
+      skills: ['Agile', 'Scrum', 'RESTful APIs', 'GraphQL', 'gRPC'],
+      color: 'bg-blue-500/10 text-blue-600'
+    }
+  ];
+
+  return (
+    <section id="skills" className="py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Technical Skills
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            A comprehensive toolkit of modern technologies and methodologies for building exceptional digital solutions.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillCategories.map((category, index) => (
+            <Card 
+              key={category.title} 
+              className="card-gradient shadow-card transition-smooth hover:shadow-hover group"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`p-3 rounded-lg ${category.color} transition-smooth group-hover:scale-110`}>
+                    <category.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-semibold text-foreground">{category.title}</h3>
+                </div>
+                
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <Badge 
+                      key={skill} 
+                      variant="secondary" 
+                      className="text-xs font-medium transition-smooth hover:bg-primary hover:text-primary-foreground"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Additional Skills Highlight */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-2 bg-primary/5 px-6 py-3 rounded-full border border-primary/20">
+            <span className="text-sm font-medium text-primary">Currently Learning:</span>
+            <Badge variant="outline" className="border-primary/30 text-primary">
+              React
+            </Badge>
+            <Badge variant="outline" className="border-primary/30 text-primary">
+              Node.js
+            </Badge>
+            <Badge variant="outline" className="border-primary/30 text-primary">
+              Microservices
+            </Badge>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SkillsSection;
