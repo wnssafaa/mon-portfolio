@@ -29,15 +29,15 @@ const Footer = () => {
     <footer className="bg-foreground text-background py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 items-center">
-          {/* Brand */}
+          {/* Marque */}
           <div>
             <h3 className="text-xl font-bold mb-2">Safaa Elouannass</h3>
             <p className="text-background/70 text-sm">
-              Full Stack Developer crafting digital solutions with passion and precision.
+              Développeuse Full Stack créant des solutions numériques avec passion et précision.
             </p>
           </div>
 
-          {/* Social Links */}
+          {/* Liens sociaux */}
           <div className="flex justify-center">
             <div className="flex space-x-6">
               {socialLinks.map((social) => (
@@ -55,22 +55,20 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Back to Top */}
+          {/* Retour en haut */}
           <div className="text-center md:text-right">
             <button
               onClick={scrollToTop}
               className="inline-flex items-center gap-2 text-sm text-background/70 hover:text-background transition-smooth"
             >
-              Back to Top ↑
+              Retour en haut ↑
             </button>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-background/20 text-center">
           <p className="text-background/70 text-sm flex items-center justify-center gap-2">
-            © {currentYear} Safaa Elouannass. Built with
-            <Heart className="h-4 w-4 text-red-400" />
-            and React.
+            © {currentYear} Safaa Elouannass.
           </p>
         </div>
       </div>

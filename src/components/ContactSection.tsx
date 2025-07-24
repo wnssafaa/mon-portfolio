@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -20,15 +21,48 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+    // Utilisez vos vrais IDs EmailJS
+    const SERVICE_ID = 'service_cxolzuc';
+    const TEMPLATE_ID = 'template_qp2p0b4';
+    const USER_ID = 'gBbaxVdjbrnVxPdmW';
+
+    console.log({
+      SERVICE_ID,
+      TEMPLATE_ID,
+      USER_ID,
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    });
+
+    emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      },
+      USER_ID
+    )
+      .then(() => {
+        toast({
+          title: "Message envoyé avec succès !",
+          description: "Merci pour votre message. Je vous répondrai rapidement.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setIsSubmitting(false);
+      })
+      .catch(() => {
+        toast({
+          title: "Erreur lors de l'envoi",
+          description: "Une erreur est survenue. Veuillez réessayer plus tard.",
+          variant: "destructive"
+        });
+        setIsSubmitting(false);
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -48,15 +82,15 @@ const ContactSection = () => {
     },
     {
       icon: Phone,
-      label: 'Phone',
+      label: 'Téléphone',
       value: '+212 675 810 629',
       href: 'tel:+212675810629',
       color: 'text-green-600'
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'Casablanca, Morocco',
+      label: 'Localisation',
+      value: 'Casablanca, Maroc',
       href: null,
       color: 'text-orange-600'
     }
@@ -82,27 +116,27 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Get In Touch
+            Contactez-moi
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Let's discuss your next project or explore potential collaboration opportunities. I'm always interested in new challenges.
+            Discutons de votre prochain projet ou explorons des opportunités de collaboration. Je suis toujours ouverte à de nouveaux défis.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contact Form */}
+          {/* Formulaire de contact */}
           <div className="lg:col-span-2">
             <Card className="card-gradient shadow-card">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-foreground mb-6">
-                  Send me a message
+                  Envoyez-moi un message
                 </h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Your Name
+                        Votre nom
                       </label>
                       <Input
                         id="name"
@@ -111,14 +145,14 @@ const ContactSection = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Enter your full name"
+                        placeholder="Entrez votre nom complet"
                         className="transition-smooth focus:ring-2 focus:ring-primary/20"
                       />
                     </div>
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email Address
+                        Adresse e-mail
                       </label>
                       <Input
                         id="email"
@@ -127,7 +161,7 @@ const ContactSection = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="Enter your email address"
+                        placeholder="Entrez votre adresse e-mail"
                         className="transition-smooth focus:ring-2 focus:ring-primary/20"
                       />
                     </div>
@@ -135,7 +169,7 @@ const ContactSection = () => {
                   
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                      Subject
+                      Sujet
                     </label>
                     <Input
                       id="subject"
@@ -144,7 +178,7 @@ const ContactSection = () => {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      placeholder="What's this about?"
+                      placeholder="De quoi s'agit-il ?"
                       className="transition-smooth focus:ring-2 focus:ring-primary/20"
                     />
                   </div>
@@ -160,7 +194,7 @@ const ContactSection = () => {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell me about your project or question..."
+                      placeholder="Parlez-moi de votre projet ou de votre question..."
                       className="transition-smooth focus:ring-2 focus:ring-primary/20 resize-none"
                     />
                   </div>
@@ -174,12 +208,12 @@ const ContactSection = () => {
                     {isSubmitting ? (
                       <>
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending...
+                        Envoi en cours...
                       </>
                     ) : (
                       <>
                         <Send className="mr-2 h-5 w-5" />
-                        Send Message
+                        Envoyer le message
                       </>
                     )}
                   </Button>
@@ -188,12 +222,12 @@ const ContactSection = () => {
             </Card>
           </div>
 
-          {/* Contact Information */}
+          {/* Informations de contact */}
           <div className="space-y-6">
             <Card className="card-gradient shadow-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-6">
-                  Contact Information
+                  Informations de contact
                 </h3>
                 
                 <div className="space-y-4">
@@ -224,7 +258,7 @@ const ContactSection = () => {
             <Card className="card-gradient shadow-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-6">
-                  Follow Me
+                  Suivez-moi
                 </h3>
                 
                 <div className="space-y-4">
@@ -246,17 +280,17 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            {/* Quick Info */}
+            {/* Informations rapides */}
             <Card className="border-dashed border-2 border-primary/20 bg-primary/5">
               <CardContent className="p-6 text-center">
                 <div className="p-3 bg-primary/10 rounded-lg w-fit mx-auto mb-4">
                   <CheckCircle className="h-6 w-6 text-primary" />
                 </div>
                 <h4 className="font-semibold text-foreground mb-2">
-                  Available for Opportunities
+                  Disponible pour des opportunités
                 </h4>
                 <p className="text-sm text-muted-foreground">
-                  Open to full-time positions and freelance projects. Let's build something amazing together!
+                  Ouvert aux postes à temps plein et aux projets freelance. Construisons quelque chose d'incroyable ensemble !
                 </p>
               </CardContent>
             </Card>

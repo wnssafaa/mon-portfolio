@@ -6,38 +6,38 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       icon: Code,
-      title: 'Programming Languages',
+      title: 'Langages de programmation',
       skills: ['Java', 'JavaScript', 'TypeScript', 'Python', 'C++', 'C'],
       color: 'bg-primary/10 text-primary'
     },
     {
       icon: Server,
-      title: 'Frameworks & Libraries',
+      title: 'Frameworks & Librairies',
       skills: ['Spring Boot', 'Angular', 'Hibernate', 'Tailwind CSS', 'JEE'],
       color: 'bg-accent/10 text-accent'
     },
     {
       icon: Database,
-      title: 'Databases',
+      title: 'Bases de données',
       skills: ['MySQL', 'Oracle', 'SQL', 'PL/SQL'],
       color: 'bg-green-500/10 text-green-600'
     },
     {
       icon: Wrench,
-      title: 'Tools & Technologies',
+      title: 'Outils & Technologies',
       skills: ['Git', 'GitHub', 'GitLab', 'Docker', 'Postman', 'PgAdmin'],
       color: 'bg-orange-500/10 text-orange-600'
     },
     {
       icon: Palette,
-      title: 'Design & Planning',
+      title: 'Design & Planification',
       skills: ['Figma', 'UML', 'Trello', 'Jira', 'Open Project'],
       color: 'bg-purple-500/10 text-purple-600'
     },
     {
       icon: Users,
-      title: 'Methodologies',
-      skills: ['Agile', 'Scrum', 'RESTful APIs', 'GraphQL', 'gRPC'],
+      title: 'Méthodologies',
+      skills: ['Agile', 'Scrum',  'GraphQL', 'gRPC'],
       color: 'bg-blue-500/10 text-blue-600'
     }
   ];
@@ -47,10 +47,10 @@ const SkillsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Technical Skills
+            Compétences techniques
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit of modern technologies and methodologies for building exceptional digital solutions.
+            Une boîte à outils complète de technologies et de méthodologies modernes pour créer des solutions numériques d’exception.
           </p>
         </div>
 
@@ -85,10 +85,10 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Additional Skills Highlight */}
+        {/* Mise en avant des compétences en cours d'apprentissage */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/5 px-6 py-3 rounded-full border border-primary/20">
-            <span className="text-sm font-medium text-primary">Currently Learning:</span>
+            <span className="text-sm font-medium text-primary">En cours d'apprentissage :</span>
             <Badge variant="outline" className="border-primary/30 text-primary">
               React
             </Badge>

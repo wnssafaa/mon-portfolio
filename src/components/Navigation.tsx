@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -6,14 +6,17 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'education', label: 'Education' },
-    { id: 'contact', label: 'Contact' }
-  ];
+  const navItems = useMemo(
+    () => [
+      { id: 'home', label: 'Accueil' },
+      { id: 'about', label: 'À propos' },
+      { id: 'skills', label: 'Compétences' },
+      { id: 'experience', label: 'Expérience' },
+      { id: 'education', label: 'Éducation' },
+      { id: 'contact', label: 'Contact' }
+    ],
+    []
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +38,7 @@ const Navigation = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navItems]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -53,7 +56,7 @@ const Navigation = () => {
             Safaa Elouannass
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Navigation bureau */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <button
@@ -70,7 +73,7 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Navigation Button */}
+          {/* Bouton menu mobile */}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -82,7 +85,7 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Menu mobile */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">

@@ -7,38 +7,37 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            About Me
+            À propos de moi
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A passionate Full Stack Developer with expertise in modern web technologies and a strong foundation in computer science.
+            Développeuse Full Stack passionnée, experte en technologies web modernes et dotée d'une solide base en informatique.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* About Text */}
+          {/* Texte de présentation */}
           <div className="space-y-6">
             <div className="animate-slide-in">
               <h3 className="text-2xl font-semibold text-foreground mb-4">
-                Professional Summary
+                Résumé professionnel
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I'm a dedicated Full Stack Developer based in Casablanca, Morocco, with a strong background in Java ecosystem technologies. 
-                My journey in software development began with a passion for problem-solving and has evolved into expertise in building 
-                robust, scalable web applications.
+                Je suis une développeuse Full Stack basée à Casablanca, Maroc, avec une solide expérience dans l'écosystème Java.
+                Mon parcours dans le développement logiciel a commencé par une passion pour la résolution de problèmes et a évolué vers une expertise dans la création d'applications web robustes et évolutives.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I specialize in backend development using Java and Spring Boot, frontend development with Angular, and database design. 
-                My experience spans from developing RESTful APIs to creating responsive user interfaces and implementing secure authentication systems.
+                Je me spécialise dans le développement backend avec Java et Spring Boot, le développement frontend avec Angular, ainsi que la conception de bases de données.
+                Mon expérience va du développement d'API REST à la création d'interfaces utilisateur réactives et à la mise en place de systèmes d'authentification sécurisés.
               </p>
             </div>
 
             <div className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="h-5 w-5 text-primary" />
-              <span>Based in Casablanca, Morocco</span>
+              <span>Basée à Casablanca, Maroc</span>
             </div>
           </div>
 
-          {/* Education & Certifications */}
+          {/* Éducation & Certifications */}
           <div className="space-y-6">
             <Card className="card-gradient shadow-card transition-smooth hover:shadow-hover">
               <CardContent className="p-6">
@@ -47,18 +46,18 @@ const AboutSection = () => {
                     <GraduationCap className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Education</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Éducation</h4>
                     <div className="space-y-3 text-sm text-muted-foreground">
                       <div>
-                        <p className="font-medium">Bachelor's in Computer Science</p>
-                        <p>Databases Track - Faculty of Sciences Ben M'Sik (2022-2023)</p>
+                        <p className="font-medium">Licence en Informatique</p>
+                        <p>Parcours Bases de Données - Faculté des Sciences Ben M'Sik (2022-2023)</p>
                       </div>
                       <div>
-                        <p className="font-medium">DEUG in Mathematics and Computer Science</p>
-                        <p>Faculty of Sciences Ben M'Sik (2021-2022)</p>
+                        <p className="font-medium">DEUG Mathématiques et Informatique</p>
+                        <p>Faculté des Sciences Ben M'Sik (2021-2022)</p>
                       </div>
                       <div>
-                        <p className="font-medium">High School Diploma in Mathematics A</p>
+                        <p className="font-medium">Baccalauréat Mathématiques A</p>
                         <p>Lycée Ben M'Sik (2018-2019)</p>
                       </div>
                     </div>
@@ -81,12 +80,12 @@ const AboutSection = () => {
                         <p>Java SE 17 Developer</p>
                       </div>
                       <div>
-                        <p className="font-medium">Full Stack Development</p>
-                        <p>Simplon Maghreb Certification</p>
+                        <p className="font-medium">Développement Full Stack</p>
+                        <p>Certification Simplon Maghreb</p>
                       </div>
                       <div>
-                        <p className="font-medium">Full Stack Training</p>
-                        <p>Coding Tech - Java & Spring Boot (Jan-May 2025)</p>
+                        <p className="font-medium">Formation Full Stack</p>
+                        <p>Coding Tech - Java & Spring Boot (Janv-Mai 2025)</p>
                       </div>
                     </div>
                   </div>

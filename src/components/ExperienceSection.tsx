@@ -4,49 +4,62 @@ import { Badge } from '@/components/ui/badge';
 
 const ExperienceSection = () => {
   const experiences = [
+{
+  "title": "Stagiaire Développeuse Full Stack",
+  "company": "Digitalia Solutions",
+  "location": "Casablanca, Maroc",
+  "period": "Février 2025 - Mai 2025",
+  "description": "Développement d'une application web et mobile de field force pour la réalisation d'études de marché et le suivi des produits en magasin pour le client Richbond.",
+  "achievements": [
+    "Conception et développement d'une application web responsive avec Spring Boot et Angular",
+    "Développement d'une application mobile cross-platform avec React Native et Expo",
+    "Implémentation de la gestion des utilisateurs et de l'authentification sécurisée",
+    "Mise en place du suivi des merchandisers et de la planification des visites",
+    "Création de tableaux de bord analytiques pour le suivi des performances",
+    "Intégration de fonctionnalités d'export Excel et de récupération de mot de passe",
+    "Collaboration avec l'équipe pour l'analyse des besoins et les spécifications techniques"
+  ],
+  "technologies": [
+    "Java",
+    "Spring Boot",
+    "Angular",
+    "React Native",
+    "Expo",
+    "MySQL",
+    "APIs REST",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "current": false
+},
     {
-      title: 'Full Stack Developer Intern',
-      company: 'Digitalia Solutions',
-      location: 'Casablanca, Morocco',
-      period: 'June 2025 - Present',
-      description: 'Developing a comprehensive web application with user management and analytics capabilities.',
-      achievements: [
-        'Built responsive web application with user profile management',
-        'Implemented visit planning and merchandiser tracking system',
-        'Created analytical dashboard with data visualization',
-        'Developed Excel export functionality and password recovery features'
-      ],
-      technologies: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'REST APIs'],
-      current: true
-    },
-    {
-      title: 'Backend Developer Intern',
+      title: 'Stagiaire Développeuse Backend',
       company: 'Firethunder',
-      location: 'Casablanca, Morocco',
-      period: 'December 2023 - September 2024',
-      description: 'Focused on API development and microservices architecture for hospitality management.',
+      location: 'Casablanca, Maroc',
+      period: 'Décembre 2023 - Septembre 2024',
+      description: 'Développement d’API et architecture microservices pour la gestion hôtelière.',
       achievements: [
-        'Developed GraphQL API for restaurant and hospitality management',
-        'Built pricing microservice using gRPC protocol',
-        'Implemented efficient data models with Django Python',
-        'Collaborated with frontend team for seamless integration'
+        'Développement d’une API GraphQL pour la gestion de restaurants et d’hôtellerie',
+        'Création d’un microservice de tarification avec le protocole gRPC',
+        'Mise en place de modèles de données efficaces avec Django Python',
+        'Collaboration avec l’équipe frontend pour une intégration fluide'
       ],
       technologies: ['GraphQL', 'Django', 'Python', 'gRPC', 'PostgreSQL'],
       current: false
     },
     {
-      title: 'Mobile App Developer Intern',
+      title: 'Stagiaire Développeuse Mobile',
       company: 'TFO Solution',
-      location: 'Casablanca, Morocco',
-      period: 'March 2023 - June 2023',
-      description: 'Final project internship developing a mobile application for equipment management.',
+      location: 'Casablanca, Maroc',
+      period: 'Mars 2023 - Juin 2023',
+      description: 'Stage de fin d’études pour le développement d’une application mobile de gestion de matériel.',
       achievements: [
-        'Developed "Equiptrack" mobile application from concept to deployment',
-        'Implemented technician equipment management system',
-        'Created user-friendly mobile interface with real-time updates',
-        'Integrated barcode scanning for equipment tracking'
+        'Développement de l’application mobile "Equiptrack" de la conception au déploiement',
+        'Mise en place d’un système de gestion du matériel pour les techniciens',
+        'Création d’une interface mobile intuitive avec mises à jour en temps réel',
+        'Intégration du scan de codes-barres pour le suivi du matériel'
       ],
-      technologies: ['Java', 'Android', 'SQLite', 'REST APIs'],
+      technologies: ['Java', 'Android', 'SQLite', 'APIs REST'],
       current: false
     }
   ];
@@ -56,15 +69,15 @@ const ExperienceSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Professional Experience
+            Expérience professionnelle
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hands-on experience building real-world applications and working with modern development teams.
+            Expérience pratique dans la création d’applications réelles et la collaboration avec des équipes de développement modernes.
           </p>
         </div>
 
         <div className="relative">
-          {/* Timeline line */}
+          {/* Ligne de la frise chronologique */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 transform md:-translate-x-0.5"></div>
 
           <div className="space-y-12">
@@ -73,14 +86,14 @@ const ExperienceSection = () => {
                 key={experience.company} 
                 className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
               >
-                {/* Timeline dot */}
+                {/* Point de la frise */}
                 <div className={`absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background transform ${index % 2 === 0 ? 'md:-translate-x-2' : 'md:-translate-x-2'} z-10`}>
                   {experience.current && (
                     <div className="absolute inset-0 bg-primary rounded-full animate-ping"></div>
                   )}
                 </div>
 
-                {/* Content card */}
+                {/* Carte de contenu */}
                 <div className={`ml-12 md:ml-0 ${index % 2 === 0 ? 'md:mr-8 md:text-right' : 'md:ml-8'} md:w-1/2`}>
                   <Card className="card-gradient shadow-card transition-smooth hover:shadow-hover group">
                     <CardContent className="p-6">
@@ -105,7 +118,7 @@ const ExperienceSection = () => {
                           </div>
                           {experience.current && (
                             <Badge className="mb-4 bg-green-500/10 text-green-600 border-green-500/20">
-                              Currently Working
+                              En poste
                             </Badge>
                           )}
                         </div>
@@ -116,7 +129,7 @@ const ExperienceSection = () => {
                       </p>
 
                       <div className="mb-4">
-                        <h4 className="font-medium text-foreground mb-2">Key Achievements:</h4>
+                        <h4 className="font-medium text-foreground mb-2">Réalisations clés :</h4>
                         <ul className="space-y-1 text-sm text-muted-foreground">
                           {experience.achievements.map((achievement, i) => (
                             <li key={i} className="flex items-start gap-2">
@@ -128,7 +141,7 @@ const ExperienceSection = () => {
                       </div>
 
                       <div>
-                        <h4 className="font-medium text-foreground mb-2">Technologies Used:</h4>
+                        <h4 className="font-medium text-foreground mb-2">Technologies utilisées :</h4>
                         <div className="flex flex-wrap gap-2">
                           {experience.technologies.map((tech) => (
                             <Badge 

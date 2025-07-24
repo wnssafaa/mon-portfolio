@@ -5,39 +5,39 @@ import { Badge } from '@/components/ui/badge';
 const EducationSection = () => {
   const education = [
     {
-      degree: 'Full Stack Developer Training',
+      degree: 'Formation Développeuse Full Stack',
       institution: 'Coding Tech',
-      location: 'Casablanca, Morocco',
-      period: 'January 2025 - May 2025',
-      description: 'Intensive training program focused on Java ecosystem and Spring Boot development.',
-      subjects: ['Java Advanced', 'Spring Boot', 'Microservices', 'REST APIs'],
+      location: 'Casablanca, Maroc',
+      period: 'Janvier 2025 - Mai 2025',
+      description: 'Programme de formation intensif axé sur l’écosystème Java et le développement Spring Boot.',
+      subjects: ['Java Avancé', 'Spring Boot', 'Microservices', 'APIs REST'],
       status: 'completed'
     },
     {
-      degree: 'Bachelor in Computer Science',
-      institution: 'Faculty of Sciences Ben M\'Sik',
-      location: 'Casablanca, Morocco',
+      degree: 'Licence en Informatique',
+      institution: 'Faculté des Sciences Ben M\'Sik',
+      location: 'Casablanca, Maroc',
       period: '2022 - 2023',
-      description: 'Specialized in Database Systems with focus on SQL, database design, and data management.',
-      subjects: ['Database Design', 'SQL & PL/SQL', 'Data Structures', 'Software Engineering'],
+      description: 'Spécialisation en systèmes de bases de données avec un accent sur SQL, la conception de bases de données et la gestion des données.',
+      subjects: ['Conception de bases de données', 'SQL & PL/SQL', 'Structures de données', 'Génie logiciel'],
       status: 'completed'
     },
     {
-      degree: 'DEUG in Mathematics and Computer Science',
-      institution: 'Faculty of Sciences Ben M\'Sik',
-      location: 'Casablanca, Morocco',
+      degree: 'DEUG Mathématiques et Informatique',
+      institution: 'Faculté des Sciences Ben M\'Sik',
+      location: 'Casablanca, Maroc',
       period: '2021 - 2022',
-      description: 'Foundation studies combining mathematical concepts with computer science fundamentals.',
-      subjects: ['Mathematics', 'Programming Fundamentals', 'Algorithms', 'Logic'],
+      description: 'Études fondamentales combinant concepts mathématiques et bases de l’informatique.',
+      subjects: ['Mathématiques', 'Bases de la programmation', 'Algorithmes', 'Logique'],
       status: 'completed'
     },
     {
-      degree: 'Baccalauréat in Mathematics A',
+      degree: 'Baccalauréat Mathématiques A',
       institution: 'Lycée Ben M\'Sik',
-      location: 'Casablanca, Morocco',
+      location: 'Casablanca, Maroc',
       period: '2018 - 2019',
-      description: 'High school diploma with specialization in Mathematics and Sciences.',
-      subjects: ['Mathematics', 'Physics', 'Chemistry', 'Computer Science'],
+      description: 'Diplôme du baccalauréat avec spécialisation en mathématiques et sciences.',
+      subjects: ['Mathématiques', 'Physique', 'Chimie', 'Informatique'],
       status: 'completed'
     }
   ];
@@ -52,9 +52,9 @@ const EducationSection = () => {
       verified: true
     },
     {
-      name: 'Full Stack Development Certification',
+      name: 'Certification Développement Full Stack',
       issuer: 'Simplon Maghreb',
-      credential: 'Web Development Program',
+      credential: 'Programme Développement Web',
       date: '2023',
       icon: Award,
       verified: true
@@ -66,19 +66,19 @@ const EducationSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Education & Certifications
+            Éducation & Certifications
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Strong academic foundation combined with industry-recognized certifications in modern technologies.
+            Solide parcours académique complété par des certifications reconnues dans les technologies modernes.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Education Timeline */}
+          {/* Parcours académique */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-semibold text-foreground mb-8 flex items-center gap-2">
               <GraduationCap className="h-6 w-6 text-primary" />
-              Academic Background
+              Parcours académique
             </h3>
             
             <div className="space-y-6">
@@ -102,7 +102,7 @@ const EducationSection = () => {
                             variant="secondary" 
                             className="bg-green-500/10 text-green-600 border-green-500/20"
                           >
-                            Completed
+                            Terminé
                           </Badge>
                         </div>
                         
@@ -124,7 +124,7 @@ const EducationSection = () => {
                         </p>
                         
                         <div>
-                          <h5 className="font-medium text-foreground mb-2">Key Subjects:</h5>
+                          <h5 className="font-medium text-foreground mb-2">Matières principales :</h5>
                           <div className="flex flex-wrap gap-2">
                             {edu.subjects.map((subject) => (
                               <Badge 
@@ -171,7 +171,7 @@ const EducationSection = () => {
                           </h4>
                           {cert.verified && (
                             <Badge className="bg-blue-500/10 text-blue-600 border-blue-500/20">
-                              Verified
+                              Vérifié
                             </Badge>
                           )}
                         </div>
@@ -181,7 +181,7 @@ const EducationSection = () => {
                         
                         <div className="flex items-center gap-1 text-sm text-muted-foreground">
                           <Calendar className="h-4 w-4" />
-                          <span>Issued {cert.date}</span>
+                          <span>Délivré en {cert.date}</span>
                         </div>
                       </div>
                     </div>
@@ -189,17 +189,17 @@ const EducationSection = () => {
                 </Card>
               ))}
               
-              {/* Additional Learning */}
+              {/* Apprentissage continu */}
               <Card className="border-dashed border-2 border-primary/20 bg-primary/5">
                 <CardContent className="p-6 text-center">
                   <div className="p-3 bg-primary/10 rounded-lg w-fit mx-auto mb-4">
                     <Star className="h-6 w-6 text-primary" />
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">
-                    Continuous Learning
+                    Apprentissage continu
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Always exploring new technologies and expanding my skill set through online courses and personal projects.
+                    Toujours en exploration de nouvelles technologies et en élargissant mes compétences via des cours en ligne et des projets personnels.
                   </p>
                 </CardContent>
               </Card>
