@@ -13,7 +13,7 @@ const SkillsSection = () => {
     {
       icon: Server,
       title: 'Frameworks & Librairies',
-      skills: ['Spring Boot', 'Angular', 'Hibernate', 'Tailwind CSS', 'JEE'],
+      skills: ['Spring Boot', 'Angular', 'Hibernate', 'Tailwind CSS', 'JEE','React','node.js'],
       color: 'bg-accent/10 text-accent'
     },
     {
@@ -37,7 +37,7 @@ const SkillsSection = () => {
     {
       icon: Users,
       title: 'Méthodologies',
-      skills: ['Agile', 'Scrum',  'GraphQL', 'gRPC'],
+      skills: ['Agile', 'Scrum'],
       color: 'bg-blue-500/10 text-blue-600'
     }
   ];

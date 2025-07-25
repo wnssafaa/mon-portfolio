@@ -92,13 +92,13 @@ const ProjectSection = () => (
 									<h3 className="text-xl font-semibold text-primary">
 										{project.name}
 									</h3>
-									<a
+									{/* <a
 										href={project.link}
 										target="_blank"
 										rel="noopener noreferrer"
 									>
 										<ExternalLink className="h-5 w-5 text-accent hover:text-primary" />
-									</a>
+									</a> */}
 								</div>
 								<p className="text-muted-foreground mb-4 flex-1">
 									{project.description}
