@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 section-gradient">
+    <section id="about" className="py-20 bg-background from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/30"  >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -19,15 +19,17 @@ const AboutSection = () => {
           <div className="space-y-6">
             <div className="animate-slide-in">
               <h3 className="text-2xl font-semibold text-foreground mb-4">
-                Résumé professionnel
+                Profil professionnel
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Je suis une développeuse Full Stack basée à Casablanca, Maroc, avec une solide expérience dans l'écosystème Java.
-                Mon parcours dans le développement logiciel a commencé par une passion pour la résolution de problèmes et a évolué vers une expertise dans la création d'applications web robustes et évolutives.
+                Développeuse Full Stack passionnée et créative, basée à Casablanca, Maroc.
+                Mon parcours dans le développement web combine une solide expertise technique avec 
+                une approche orientée solutions pour créer des applications performantes et intuitives.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Je me spécialise dans le développement backend avec Java et Spring Boot, le développement frontend avec Angular, ainsi que la conception de bases de données.
-                Mon expérience va du développement d'API REST à la création d'interfaces utilisateur réactives et à la mise en place de systèmes d'authentification sécurisés.
+                Polyvalente et adaptable, je maîtrise l'ensemble du cycle de développement, 
+                du backend au frontend. Mon approche met l'accent sur le code propre, 
+                les bonnes pratiques de développement et les architectures modulaires.
               </p>
             </div>
 
@@ -39,55 +41,58 @@ const AboutSection = () => {
 
           {/* Éducation & Certifications */}
           <div className="space-y-6">
-            <Card className="card-gradient shadow-card transition-smooth hover:shadow-hover">
+            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <GraduationCap className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Éducation</h4>
-                    <div className="space-y-3 text-sm text-muted-foreground">
-                      <div>
-                        <p className="font-medium">Licence en Informatique</p>
-                        <p>Parcours Bases de Données - Faculté des Sciences Ben M'Sik (2022-2023)</p>
-                      </div>
-                      <div>
-                        <p className="font-medium">DEUG Mathématiques et Informatique</p>
-                        <p>Faculté des Sciences Ben M'Sik (2021-2022)</p>
-                      </div>
-                      <div>
-                        <p className="font-medium">Baccalauréat Mathématiques A</p>
-                        <p>Lycée Ben M'Sik (2018-2019)</p>
-                      </div>
-                    </div>
+                    <h4 className="font-semibold text-foreground mb-4">Parcours académique</h4>
+                    <ul className="space-y-4 text-sm text-muted-foreground">
+                      <li className="flex flex-col border-l-2 border-primary/20 pl-4 py-1">
+                        <span className="font-medium">Licence en Informatique</span>
+                        <span>Parcours Bases de Données</span>
+                        <span className="text-xs text-muted-foreground/70">Faculté des Sciences Ben M'Sik • 2022-2023</span>
+                      </li>
+                      <li className="flex flex-col border-l-2 border-primary/20 pl-4 py-1">
+                        <span className="font-medium">DEUG Mathématiques et Informatique</span>
+                        <span className="text-xs text-muted-foreground/70">Faculté des Sciences Ben M'Sik • 2021-2022</span>
+                      </li>
+                      <li className="flex flex-col border-l-2 border-primary/20 pl-4 py-1">
+                        <span className="font-medium">Baccalauréat Mathématiques A</span>
+                        <span className="text-xs text-muted-foreground/70">Lycée Ben M'Sik • 2018-2019</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="card-gradient shadow-card transition-smooth hover:shadow-hover">
+            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-accent/10 rounded-lg">
                     <Award className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Certifications</h4>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <div>
-                        <p className="font-medium">Oracle Certified Professional</p>
-                        <p>Java SE 17 Developer</p>
-                      </div>
-                      <div>
-                        <p className="font-medium">Développement Full Stack</p>
-                        <p>Certification Simplon Maghreb</p>
-                      </div>
-                      <div>
-                        <p className="font-medium">Formation Full Stack</p>
-                        <p>Coding Tech - Java & Spring Boot (Janv-Mai 2025)</p>
-                      </div>
-                    </div>
+                    <h4 className="font-semibold text-foreground mb-4">Certifications</h4>
+                    <ul className="space-y-4 text-sm text-muted-foreground">
+                      <li className="flex flex-col border-l-2 border-accent/20 pl-4 py-1">
+                        <span className="font-medium">Oracle Certified Professional</span>
+                        <span>Java SE 17 Developer</span>
+                        <span className="text-xs text-muted-foreground/70">2024</span>
+                      </li>
+                      <li className="flex flex-col border-l-2 border-accent/20 pl-4 py-1">
+                        <span className="font-medium">Développement Full Stack</span>
+                        <span className="text-xs text-muted-foreground/70">Certification Simplon Maghreb • 2023</span>
+                      </li>
+                      <li className="flex flex-col border-l-2 border-accent/20 pl-4 py-1">
+                        <span className="font-medium">Formation Full Stack</span>
+                        <span>Java & Spring Boot</span>
+                        <span className="text-xs text-muted-foreground/70">Coding Tech • Janv-Mai 2025</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </CardContent>

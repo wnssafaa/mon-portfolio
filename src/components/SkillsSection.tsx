@@ -86,20 +86,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Mise en avant des compétences en cours d'apprentissage */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/5 px-6 py-3 rounded-full border border-primary/20">
-            <span className="text-sm font-medium text-primary">En cours d'apprentissage :</span>
-            <Badge variant="outline" className="border-primary/30 text-primary">
-              React
-            </Badge>
-            <Badge variant="outline" className="border-primary/30 text-primary">
-              Node.js
-            </Badge>
-            <Badge variant="outline" className="border-primary/30 text-primary">
-              Microservices
-            </Badge>
-          </div>
-        </div>
+ 
       </div>
     </section>
   );
