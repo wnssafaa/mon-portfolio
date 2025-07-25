@@ -19,7 +19,7 @@ const EducationSection = () => {
       location: 'Casablanca, Maroc',
       period: '2022 - 2023',
       description: 'Spécialisation en systèmes de bases de données avec un accent sur SQL, la conception de bases de données et la gestion des données.',
-      subjects: ['Conception de bases de données', 'SQL & PL/SQL', 'Structures de données', 'Génie logiciel'],
+      subjects: ['Conception UML', 'SQL & PL/SQL', 'Structures de données', 'JAVA'],
       status: 'completed'
     },
     {
@@ -28,7 +28,7 @@ const EducationSection = () => {
       location: 'Casablanca, Maroc',
       period: '2021 - 2022',
       description: 'Études fondamentales combinant concepts mathématiques et bases de l’informatique.',
-      subjects: ['Mathématiques', 'Bases de la programmation', 'Algorithmes', 'Logique'],
+      subjects: ['Mathématiques', 'Bases de la programmation', 'Algorithmes', 'Logique','C','javascript'],
       status: 'completed'
     },
     {
