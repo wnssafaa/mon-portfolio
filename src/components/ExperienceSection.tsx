@@ -9,7 +9,7 @@ const ExperienceSection = () => {
       company: "Digitalia Solutions",
       location: "Casablanca, Maroc",
       period: "Février 2025 - Mai 2025",
-      description: "Développement d'une application web et mobile de field force pour la réalisation d'études de marché et le suivi des produits en magasin pour le client Richbond.",
+      description: "Développement d'une application web et mobile de field force pour la réalisation d'études de marché et le suivi des produits en magasin.",
       achievements: [
         "Conception et développement d'une application web responsive avec Spring Boot et Angular",
         "Développement d'une application mobile cross-platform avec React Native et Expo",
