@@ -33,13 +33,13 @@ const ExperienceSection = () => {
       current: false
     },
     {
-      title: 'Stagiaire Développeuse Backend',
+      title: 'Stagiaire Développeuse Full Stack',
       company: 'Firethunder',
       location: 'Casablanca, Maroc',
       period: 'Décembre 2023 - Septembre 2024',
-      description: 'Développement d’API et architecture microservices pour la gestion hôtelière.',
+      description: 'Développement d’API et architecture microservices pour la gestion hôtelière et resturation.',
       achievements: [
-        'Développement d’une API GraphQL pour la gestion de restaurants et d’hôtellerie',
+        'Développement d’une API GraphQL pour la gestion de resturations et d’hôtellerie',
         'Création d’un microservice de tarification avec le protocole gRPC',
         'Mise en place de modèles de données efficaces avec Django Python',
         'Collaboration avec l’équipe frontend pour une intégration fluide'
