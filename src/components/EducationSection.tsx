@@ -9,12 +9,12 @@ const EducationSection = () => {
       institution: 'Coding Tech',
       location: 'Casablanca, Maroc',
       period: 'Janvier 2025 - Mai 2025',
-      description: 'Programme de formation intensif axé sur l’écosystème Java et le développement Spring Boot.',
-      subjects: ['Java Avancé', 'Spring Boot', 'Microservices', 'APIs REST'],
+      description: 'Programme de formation intensif axé sur l’écosystème Java et le développement Spring Boot et Angular.',
+      subjects: ['Java Avancé', 'Spring Boot', 'Microservices', 'APIs REST','Angular'],
       status: 'completed'
     },
     {
-      degree: 'Licence en Informatique',
+      degree: 'Licence Fondamentale SMI Parcours Bases de Données',
       institution: 'Faculté des Sciences Ben M\'Sik',
       location: 'Casablanca, Maroc',
       period: '2022 - 2023',
