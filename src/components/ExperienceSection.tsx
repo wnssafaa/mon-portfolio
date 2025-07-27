@@ -4,34 +4,35 @@ import { Badge } from '@/components/ui/badge';
 
 const ExperienceSection = () => {
   const experiences = [
-    {
-      title: "Stagiaire Développeuse Full Stack",
-      company: "Digitalia Solutions",
-      location: "Casablanca, Maroc",
-      period: "Février 2025 - Mai 2025",
-      description: "Développement d'une application web et mobile de field force pour la réalisation d'études de marché et le suivi des produits en magasin.",
-      achievements: [
-        "Conception et développement d'une application web responsive avec Spring Boot et Angular",
-        "Développement d'une application mobile cross-platform avec React Native et Expo",
-        "Implémentation de la gestion des utilisateurs et de l'authentification sécurisée",
-        "Mise en place du suivi des merchandisers et de la planification des visites",
-        "Création de tableaux de bord analytiques pour le suivi des performances",
-        "Intégration de fonctionnalités d'export Excel et de récupération de mot de passe",
-        "Collaboration avec l'équipe pour l'analyse des besoins et les spécifications techniques"
-      ],
-      technologies: [
-        "Java",
-        "Spring Boot",
-        "Angular",
-        "React Native",
-        "Expo",
-        "MySQL",
-        "APIs REST",
-        "JavaScript",
-        "TypeScript"
-      ],
-      current: false
-    },
+   {
+  title: "Stagiaire Développeuse Full Stack",
+  company: "Digitalia Solutions",
+  location: "Casablanca, Maroc",
+  period: "Mai 2025 - Présent",
+  description: "Développement d'une application web et mobile de field force pour la réalisation d'études de marché et le suivi des produits en magasin.",
+  achievements: [
+    "Conception et développement d'une application web responsive avec Spring Boot et Angular",
+    "Développement d'une application mobile cross-platform avec React Native et Expo",
+    "Implémentation de la gestion des utilisateurs et de l'authentification sécurisée",
+    "Mise en place du suivi des merchandisers et de la planification des visites",
+    "Création de tableaux de bord analytiques pour le suivi des performances",
+    "Intégration de fonctionnalités d'export Excel et de récupération de mot de passe",
+    "Collaboration avec l'équipe pour l'analyse des besoins et les spécifications techniques"
+  ],
+  technologies: [
+    "Java",
+    "Spring Boot",
+    "Angular",
+    "React Native",
+    "Expo",
+    "MySQL",
+    "APIs REST",
+    "JavaScript",
+    "TypeScript"
+  ],
+  current: true
+}
+,
     {
       title: 'Stagiaire Développeuse Full Stack',
       company: 'Firethunder',
