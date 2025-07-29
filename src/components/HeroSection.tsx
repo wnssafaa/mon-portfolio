@@ -1,7 +1,7 @@
 import { Github, Linkedin, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import safaaPortrait from '@/assets/safaa-portrait.jpg';
-import safaaCV from '@/assets/safaa--elouannass-cv.pdf';
+import safaaCV from '@/assets/SAFAA__ELOUANNASS.pdf';
 
 const HeroSection = () => {
   return (
