@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 const ExperienceSection = () => {
   const experiences = [
    {
-  title: "Stagiaire Développeuse Full Stack",
+  title: "Développeuse Full Stack",
   company: "Digitalia Solutions",
   location: "Casablanca, Maroc",
   period: "Mai 2025 - Présent",
