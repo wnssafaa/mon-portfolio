@@ -47,7 +47,7 @@ const EducationSection = () => {
       name: 'Oracle Certified Professional',
       issuer: 'Oracle',
       credential: 'Java SE 17 Developer',
-      date: '2024',
+      date: '2025',
       icon: Star,
       verified: true
     },
@@ -55,7 +55,7 @@ const EducationSection = () => {
       name: 'Certification Développement Full Stack',
       issuer: 'Simplon Maghreb',
       credential: 'Programme Développement Web',
-      date: '2023',
+      date: '2024',
       icon: Award,
       verified: true
     }
